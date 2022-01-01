@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+
+{% block content %}
+    
+    <h3>Nos produits en promotion</h3>
+    <p>Découvrez les bonnes affaires -15% sur ces produits.</p>
+    <div class="row">
+        {% for product in products %}
+            <div class="col-sm-4">
+                {% include 'product/single2_product.html.twig' %}
+            </div>
+        {% endfor %}
+    </div><!-- /.row -->
+    
+   <a href="{{path('home')}}"style="text-decoration:none">Retour à l'accueil</a>  
+    
+   
+    
+    <br><br><br><br><br><br><br>
+{% endblock %}
+
+
+
+

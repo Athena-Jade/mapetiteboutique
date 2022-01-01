@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter {% endblock %}
+
+{% block content %} 
+<div class="contact-us">
+    <h3 class="ml-4">Pour nous contacter, veuillez laisser un message,  <br> nous vous répondrons prochainement.</h3>
+    <br><br>
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+    <div class="row">
+        <div class="col-md-8">{{form(form)}}</div>
+        <div class="col-md-4">
+
+            <strong>Ma Petite Boutique</strong>   
+            <hr>
+            06 68 74 97 72 <br>
+            10 Rue des Champs
+            95310 Saint Ouen L'Aumône <br><br>
+
+         {#  <a href="mailto:athenajade72@gmail.com">athenajade72@gmail.com</a>   #}
+           <a href="mailto:mapetiteboutique@gmail.com">mapetiteboutique@gmail.com</a>  
+
+        </div>
+
+    </div><br><br>
+
+</div>
+<br><br>  
+{% endblock %}

@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}  {# PAGE ACCUEIL #}
+
+{% block carousel %}{% endblock %}
+
+
+{% block content %} 
+
+    <div class="welcome1-page"><br>      
+        <h3 class="text-center">LES MEILLEURES VENTES </h3>
+        <p class="text-center">Découvrez les produits les plus vendus</p>
+        <div class="catalog-meilleure">            
+            <div class="bloc-images" style="margin-top:-2%">  
+                {% for product in products %}
+                    <div>              
+                    {% include 'product/single_product.html.twig' %}
+                    </div>
+                {% endfor %}
+                           
+            </div> 
+        </div>
+        
+    </div>{#welcome1-page#}
+    <hr>      
+    
+    <div class="welcome2-page"><br>
+        <div class="specialoffer">
+                    
+            <h3 class="text-center mt-3">
+            LES PRODUITS EN PROMOTION
+            </h3>    
+            <p class="decouverte">Venez découvrir les produits en promotion</p>    
+            <marquee behavior="scroll">
+                <h6 class="promotion">Promotion du 18 oct 2021 au 24 oct 2021</h6>    
+            </marquee>
+                        
+            <img class="manteau" src="{{ asset('assets/img/familly.jpg') }}"   alt="manteau femme">
+            <div class="text_center1">     
+                <h5>            
+                    <small><b>-15% sur certains manteaux hommes et femmes mi-saison</b></small>  
+                </h5>
+                <div class="text-center mt-3">    
+                    <a class="btn btn-secondary btn-sm" href="{{path('is_special_offer')}}"style="text-decoration:none" role="button">Voir les manteaux</a>
+                </div>
+            </div>
+                
+        </div><br><br>
+    </div>       
+    <hr>
+                
+
+
+
+    <div class="welcome2-page"><br>
+        <div class="newarrival">
+                
+            <h3 class="text-center mt-3">
+                LES NOUVEAUX PRODUITS
+            </h3>
+            <p class="decouverte">Venez découvrir les <span class="clignote"><b>Nouveautés</b> </span> <br></p>   
+            <img class="bonnet" src="{{ asset('assets/img/bonnets.jpg') }}"   alt="bonnet"><br>
+            <div class="text_center2">     
+                <h5>            
+                    <small><b>Les bonnets pour vous protéger du froid</b></small>  
+                </h5>
+                <div class="text-center mt-3">    
+                    <a class="btn btn-secondary btn-sm" href="{{path('is_new_arrival')}}"style="text-decoration:none" role="button">Voir les bonnets</a>
+                </div>
+            </div>
+                    
+        </div><br><br>
+    </div>
+    <hr>
+
+
+
+    <div class="welcome2-page"><br>
+        <div class="featured">
+                
+            <h3 class="text-center mt-3">
+                LES PRODUITS STARS 
+            </h3>
+            <p class="decouverte">Faites-vous plaisir avec les drones</p>         
+            <img class="drone" src="{{ asset('assets/img/dronemedia.jpg') }}"   alt="drone"><br>
+            <div class="text_center3">     
+            <h5>
+                <small><b> Les drones, des objets de loisir </b></small>  
+            </h5>
+            <div class="text-center mt-3">    
+                <a class="btn btn-secondary btn-sm" href="{{path('is_featured')}}"style="text-decoration:none" role="button">Voir les drones</a>
+            </div>
+                    
+        </div>
+            
+        </div><br><br><br> 
+    </div>
+    
+    <br><br>      
+                
+{% endblock %} 
+
+
+      
+
+    
+    
+
+
+
+

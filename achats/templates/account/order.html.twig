@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}  
+  
+{% block title %}Vos commandes  {% endblock %} 
+
+
+{% block content %} <br><br>
+<div class="commandes_archives">
+    <br>
+    <h3>Vos commandes</h3><br>
+
+    <p>Cet espace vous permet de gérer toutes vos commandes</p><br>
+
+    <a href="{{ path('account') }}">Retour</a>
+
+    {% if orders|length == 0 %}
+        <hr>
+        <p class="text-center mb-5">  
+        Vous n'avez pas encore passer de commandes sur Ma Petite Boutique.<br>
+        </p> <br><br><br><br><br><br>
+    {% else %}
+    
+        <table class="table mt-4">
+           
+            <thead>
+                <tr>
+                    <th scope="col">Références</th>
+                    <th scope="col">passé le</th>
+                    <th scope="col">Produit(s)</th>
+                    <th scope="col">Total</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            
+            <tbody>
+            {% for order in orders %}
+           
+                <tr>
+                    <td style="padding-left:0">{{ order.reference }} </td>
+                         
+                    <td style="padding-left:0">{{ order.createdAt|date('d/m/Y') }}</td>
+                    
+                    <td>{{ order.orderDetails|length }}</td>
+                    
+                    <td>{{ ((order.carrierPrice + order.getTotal) / 100)|number_format(2, ',', '.') }} €<td>
+                   
+                    <td class="text-right"><a href="{{ path('account_order_show', { 'reference' : order.reference }) }}">Voir ma commande</a></td>
+                     
+                </tr>
+            {% endfor %}
+           
+            </tbody>
+        
+        </table>
+  
+
+    {% endif %}
+</div> {# commandes_archives #}   
+
+{% endblock %}
+
+
+
+
+
+
+
+

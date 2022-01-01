@@ -1,0 +1,845 @@
+ 
+/**,::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}*/
+
+
+body{
+  position: relative;
+  font-family:'Lobster', cursive;   
+  margin: 0;
+  padding: 0;
+}
+
+
+/* fond ecran page accueil */
+.welcome1-page {
+  background-color: rgb(243, 239, 239); 
+  margin-top: 5%;
+  margin-bottom: 5%;
+  
+}  
+  
+.bloc-images{
+  display: flex;
+  justify-content: space-around;
+}
+
+  
+/* le contenair */
+.notre-catalogue{
+    display: flex;
+    justify-content: space-between;
+   /* height: 50vh; */
+
+
+  /*height: 50%;
+   width: 100%; */
+
+  margin-bottom: 150px;
+  
+
+}
+
+  
+
+/* texte promotion qui défile */
+marquee h6 .promotion{
+ /* flex-direction: row; */
+  height: 33px;    /*33px*/
+  width: 200px;   /*150px*/
+}  
+ 
+
+
+.produits-echantillons{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding: 1%;
+}  
+
+.formulaire-produits{
+  display: flex;  
+  flex-wrap: wrap;
+  margin-left: 6%;    /* 5% */
+
+  
+}
+
+ 
+  
+
+
+.fomulaire-catalogue{
+  display: inline-flex;
+  margin: 10%;
+ 
+}
+
+
+
+html{
+ font-size: 10px;
+}
+
+
+p{
+  font-size:10px;
+}
+
+
+h1{
+  font-size:2rem;
+}
+
+
+h2{
+  font-size:1.75rem;
+}
+
+
+h3{
+  font-size: 1.5rem;
+}
+
+
+/* effet sur la navbar */
+a:hover{
+    color: rgb(13, 93, 231)!important; 
+}
+
+
+/* entête navbar Agrandir la police */
+.nav-link, .navbar-brand{
+    
+    font-size:2rem;   /* 1vw*/           
+    color: white !important;   
+    justify-content:space-between;
+    font-family:'Lobster', cursive;  
+    margin:1px;    /*6px*/     
+}    
+   
+           
+/* Ajout produit dans le panier */
+.mon_panier_rempli{
+  background-color:rgb(197, 193, 193);
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-top:5%;
+  margin-bottom: 5%;
+
+  height:70%;
+}  
+  
+
+
+/*  image du produit dans le panier */
+tbody  img{
+  width: 50px;     /*45%*/    
+  height: 45%;    
+  margin-left: -11px;   /* 35%*/
+}
+
+
+
+
+/* images signes (-) et (+)  pour le panier */
+a .moins, .ajouter{ 
+  width: 0.90rem;   /* 0.8vw */
+} 
+
+
+
+/* formulaire inscription */
+.formulaire_inscription{
+  background-color: rgb(243, 239, 239);
+  padding-right: 5%;
+  padding-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+
+/* formulaire connexion */
+.connexion_user{
+  background-color: rgb(243, 239, 239);
+  margin-bottom: 20%;
+}  
+
+
+/* vue sur 1 produit */
+.vue_sur_un_produit{
+  background-color: rgb(243, 239, 239);
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+
+/* la vue des commandes */
+.commande_show{
+  background-color: rgb(243, 239, 239); 
+  padding-left: 5%;
+  padding-right: 5%;
+
+ 
+}
+
+
+/* voir les commandes déjà passées */
+.commandes_archives{
+  background-color: rgb(243, 239, 239);
+  padding-left: 5%;
+  padding-right: 5%;
+}
+  
+
+
+
+/* photos carousel  ok bien positionnées */
+.img-fluid-carousel{
+  width:95vw;
+  height: 40vw; 
+  margin:20px;   
+}      
+
+  
+   
+/* connexion - inscription en bleu */
+.navbar-item-custom, .navbar-item-custom a:hover{
+  color: rgb(247, 251, 252) !important; 
+
+}
+
+
+.logo-ma-petite-boutique{
+  margin-left: 1%;
+}
+
+
+
+/* fond ecran page accueil isFeatured, ispecialOffer, isnewArrival */
+.welcome2-page{
+  background-color: rgb(243, 239, 239);  
+  margin-top: 5%;
+  margin-bottom: 5%;
+
+  
+} 
+
+
+/* modifier mot de passe */
+.modify_password{
+  background-color: rgb(243, 239, 239);
+  padding-right: 5%;
+  padding-left: 5%;
+  margin-top:5%;
+  margin-bottom: 5%;
+}
+
+/* modifier adresses livraison */
+.gerer_vos_adresses{
+  background-color: rgb(243, 239, 239);
+  padding-right: 5%;
+  padding-left: 5%;
+  margin-top:5%;
+  margin-bottom: 5%;
+}  
+
+
+
+/* texte en rouge */
+.text-red{
+  color: red;
+}
+
+
+/* image manteau bonnet drone */
+.manteau, .bonnet, .drone{  
+  width: 52vw; 
+  height: 25vw;  
+  margin-left: 3.7%;  
+  margin-right: 2%;  
+}  
+
+
+/* Texte sur photo special offer */
+.specialoffer {
+  position: relative;
+  text-align: center;
+}
+ 
+/* texte sur photo special offer */
+.text_center1{
+  position: absolute;
+  top:  79%;               
+  left: 48%;   
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.85rem;
+}  
+  
+
+/* text sur photo new arrival */
+.newarrival{
+  position: relative;
+  text-align: center;
+}
+/* new arrival */
+.text_center2{
+  position: absolute;
+  top: 78%;  
+  left: 49%;   
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.85rem;
+ 
+}
+
+
+/* text sur photo featured */
+.featured{
+  position: relative;
+  text-align: center;
+}
+
+/* featured */
+.text_center3{
+  position: absolute;
+  top:81%;   
+  left: 48%;  
+  transform: translate(-50%, -50%);
+  color: white;
+ 
+}
+
+
+/* texte rouge défilant */
+.promotion{
+  color: red;
+}
+
+/* texte sur le carrousel */
+.bienvenue{
+  color: rgb(34, 24, 24);
+}  
+  
+
+
+/* texte nouveautés sur les arrivages clignote carrousel */
+.new1{
+  color:white;
+  animation: clignote 2s linear infinite;
+}  
+
+@keyframes clignote {  
+  50% { opacity: 0; }
+}
+
+
+
+/* texte nouveautés clignote */
+.clignote {
+  color: red;
+  animation: clignote 2s linear infinite;
+}
+@keyframes clignote {  
+  50% { opacity: 0; }
+}
+
+
+/* liste à puces */    
+ul{
+  list-style-type: none;
+}
+
+/*************************************/
+
+/* image fichier show.html.twig et images filtre */ 
+
+.img-fluid{  
+ 
+
+
+  /* width: 50px; */
+
+  width: 5vw;
+}
+
+
+
+
+
+
+
+
+
+
+/************************************************/
+
+
+/* meilleures-vente */
+.catalog-meilleure{
+  margin-left: -1%;    /* 2%*/
+  margin-right: -2%;   /* 9% */
+  
+}
+
+
+
+
+
+
+
+
+/* image poubelle */
+.poubelle{ 
+  width: 14px;    /* 65% */
+}
+
+
+/* bouton valider votre panier */
+.btn-btn-success-btn-block-mt-3 a:hover{
+  color: blue;
+}
+
+
+/* bouton valider votre commande */
+.btn-btn-success-btn-block-btn a:hover{
+  color: blue;
+}
+
+
+/* cgu */
+.para{
+  text-align: justify;
+}
+
+
+/* section cgu */
+.cgu{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* catalogue photos */
+.box{
+  background-color: rgb(243, 239, 239);  
+}  
+  
+
+/* vos adresses */
+.card-address{
+  background-color: rgb(243, 239, 239);
+  margin-top:5%;
+  margin-bottom: 5%;
+}
+
+/* texte Formulaire */
+.tapez-votre-recherche{
+/*  margin-left: 5%;    
+  margin-top: 5%;   */
+
+  width: 80%;
+
+
+}  
+
+
+/* centrer bouton valider le formulaire */
+div .form-group #submit{
+  margin-left: 33%;
+}
+
+
+
+
+
+/* page nos produits */
+div .container-marketing-mt-5{
+ margin-left:0;
+ margin-right: 0;
+ padding-left: 0;
+ padding-right: 0;
+}
+
+
+
+
+
+
+
+
+/* page produits */
+.product-item h5{
+  text-transform: uppercase;
+  font-size: 1.25rem;  /* 0.85vw*/
+  margin-bottom: 1px;
+  margin: 5%; 
+}       
+
+
+.product-item{
+  margin-top: 50px;
+}
+
+
+.product-item .product-subtitle{
+  font-size: 0.90rem;   /* 0.0.5vw*/
+  display: block;
+  margin-bottom: 10px;
+ /* margin-left: 37%; */
+}   
+
+
+    
+.product-item .product-price{
+  font-size: 0.80rem;  /* 0.8vw*/
+  font-weight: bold;
+  /*margin-left: 37%; */
+}
+
+
+
+.product-page-price{
+  font-size: 1vw;
+}    
+
+
+/* template login.html.twig */
+.block-small{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+
+/* template Order/index.html.twig */
+.form-check{    
+  padding: 14px 41px;    /* 20px 65px*/
+  margin-top: 7px;
+}
+
+
+/* template Order/index.html.twig   police en gras */
+.col-form-label{
+  font-weight: bold;
+}
+
+
+/* template order/index.html.twig */
+.col-sm-6{
+  background-color:rgb(234, 241, 234); 
+}
+
+
+/* recapitulatif commande */
+.recap-order{
+  background-color:rgb(234, 241, 234); 
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+
+/* votre compte espace membre */
+.contenair-compte{ 
+  background-color: rgb(243, 239, 239);
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+
+/* nous contacter */
+.contact-us{
+  background-color: rgb(243, 239, 239);
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 3%;
+  padding-bottom: 1%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  
+}
+
+/* qui sommes-nous */
+.qui-sommes-nous{
+  background-color: rgb(243, 239, 239);
+  padding-left: 13%;
+  padding-right: 13%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  margin-top: 5%;
+  margin-bottom: 25%;
+  
+}
+
+
+
+/************* MEDIAS QUERIES ***********/
+
+/* entête navbar la police écriture */
+@media screen and (max-width:1100px) {  
+  .nav-link, .navbar-brand{
+    font-size: 1.50rem;  
+  }
+}
+
+
+/* entête navbar la police écriture */
+@media screen and (max-width:970px) {
+  .nav-link, .navbar-brand{
+    font-size: 1.25rem;
+  }
+}
+
+
+/* entête navbar la police écriture */
+@media screen and (max-width:879px) {
+  .nav-link, .navbar-brand{
+    font-size: 1rem;
+  }
+}
+
+
+/* page nos produits */
+@media screen and (max-width:1400px) {
+  .img-fluid{
+    width:4vw;
+    margin-left:0;
+ }
+
+
+ /* page produits */
+ .product-item h5{
+  text-transform: uppercase;
+  font-size: 1rem;  /* 0.85vw*/
+  margin-bottom: 1px;
+  margin: 0; 
+  }   
+
+    
+ 
+}
+
+
+@media screen and (max-width:1200px) {
+  .img-fluid{
+    width:3.5vw;
+    margin-left:0;
+ }
+
+
+ /* page produits */
+ .product-item h5{
+  text-transform: uppercase;
+  font-size: 0.80rem;  /* 0.85vw*/
+  margin-bottom: 1px;
+  margin: 0; 
+  }   
+
+}
+
+
+@media screen and (max-width:781px) {
+  .img-fluid{
+    width:2.90vw;
+    margin-left:0;
+  }
+    
+  
+ /* page produits */
+ .product-item h5{
+    text-transform: uppercase;
+    font-size: 0.60rem;  /* 0.85vw*/
+    margin-bottom: 1px;
+    margin: 0; 
+  }   
+
+
+  div .formulaire-catalogue{
+    margin-left:-6%;
+  }
+
+
+  /* texte Formulaire */
+ .tapez-votre-recherche{
+  /*  margin-left: 5%;    
+    margin-top: 5%;   */
+  
+    width: 60%;
+  
+  
+  }  
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* adresses de livraison en ligne (row) */
+@media screen and (max-width:780px){
+  .card-address{         
+    margin-bottom:6px;
+  }
+}
+
+
+
+/* archives des commandes */
+@media screen and (max-width:1500px) {
+  div .commandes_archives{
+    font-size: 1.25rem;
+    
+  }
+  
+}
+
+
+/* archives des commandes */
+@media screen and (max-width:800px) {
+  div .commandes_archives{
+    font-size: 1rem;
+    
+    
+  }
+  
+}
+
+
+/* archives des commandes */
+@media screen and (max-width:500px) {
+  div .commandes_archives{
+    font-size: 0.80rem;
+   
+  }
+  
+}
+
+
+
+
+
+
+/* FOOTER */
+.visa, .master_card, .paypal,.cadhoc{
+  height: 12px;                               
+  width: 12px;                
+  margin-left: 11px;                   
+                   
+}
+
+
+.footer-clean {
+  padding: 15px ;                       
+  background-color:rgb(97, 97, 98); 
+  position:sticky;   /*relative */
+  margin-top:367px;    /*100px*/  
+  color: #ebedee;    
+}
+ 
+
+.footer-clean h4 { 
+  margin-top:0;
+  margin-bottom: 0                
+  font-weight:bold;
+  font-size: 1.5rem;         
+}
+
+.footer-clean ul {
+  padding:0;
+  list-style:none;
+  line-height: 1;                  
+  font-size: 1rem;                
+  margin-bottom:0;
+}
+
+.footer-clean ul a {
+  color:inherit;
+  text-decoration:none;
+  
+}
+
+.footer-clean ul a:hover {
+  opacity:1;
+}
+
+/* logos sociaux centrés */
+.footer-clean .item.social {
+  text-align:center;
+}
+
+@media (max-width:1000px) {   
+  .footer-clean .item {
+    text-align:left;
+    padding-bottom:3px; 
+  }
+}
+
+
+
+.footer-clean .item.social > a {
+  font-size: 1rem;  
+  width: 2vw;   
+  height:2vh;  
+  line-height:0;       
+  display:inline-block;
+  text-align:center;
+  border-radius:50%; 
+  
+  margin-left: 5px;        
+  margin-top:  5px;      
+  color:inherit;
+  opacity:0.75;
+} 
+
+.footer-clean .item.social > a:hover {
+  opacity: 5;   
+  color:white;
+  border: 2px solid;
+}
+
+
+/* logos sociaux */
+@media (max-width:580px) {  
+  .footer-clean .item.social > a {
+    margin-top:1.5vw;  
+    padding:2%            
+  }
+
+
+  .footer-clean .item.social>a{
+    width: 1.65vw;
+    height: 1.65vh;
+  }
+
+
+
+}
+
+
+.footer-clean .copyright {
+  margin-top:  2px;       
+  margin-bottom:0;
+  font-size: 0.65rem;      
+} 
+
+
+
+
+
+
+

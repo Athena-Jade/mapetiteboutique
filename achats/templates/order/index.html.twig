@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}                              {#  page récapitulatif avant de valider la commande, payer la commande #}
+
+{% block title %}Valider votre commande{% endblock %}
+
+{% block content %}
+    <br><br>
+    
+
+    <h3> Passez votre commande</h3>
+    <p>Choisissez vos préférences avant de passer votre commande</p>
+    <hr>
+
+   
+    <div class="row">
+        
+        <div class="col-sm-6">    
+            {% set formHtml %}
+                {{form_start(form, {action:path('order_recap')}) }} 
+                {{form_label(form.addresses, 'Choisissez votre adresse de livraison')}}
+                <a href="{{ path('account_address_add')}}">Ajoutez une nouvelle adresse</a> 
+            {{form_end(form)}}
+            {% endset %}
+                
+            {{formHtml|replace({'[br]' : '<br/>'})|raw }}   {# raw permet de lire du html  #}
+        </div>
+            
+            
+        <div class="col-sm-6">
+
+            <div class="text-center">
+                <b>Récapitulatif de votre commande</b><br> <br>
+            </div>    {# {{dump(cart)}}   #}
+            
+            <div class="order-summary">
+                {% for key, product in cart %} {#  key permet de compter, ajout d'une marge haute entre les photos #}
+
+                <div class="row {% if key > 0 %}mt-2{% endif %}">
+                    <div class="col-2">
+                        <img src="/uploads/{{ product.product.illustration}}" alt="{{product.product.name}}" width="90%" > {# 100px#}
+                    </div>
+                                    
+                    <div class="col-8 my-auto" style="margin-left:2%"> {# my-auto permet de centrer le texte avec l'image #}
+                        {{product.product.name }} <br>
+                        <small>{{product.product.subtitle}}</small>
+                    </div>
+                                    
+                    <div class="col-2 my-auto" style="margin-left:19%; style="padding-bottom:3%">
+                        x {{product.quantity}} <br>
+                                    
+                        <small>{{ (product.product.price * product.quantity /100)|number_format(2, ',', '.') }}€</small>
+                    </div>
+
+
+                </div>{# row #}
+                            
+                               
+                {% endfor %}
+                
+            </div>
+
+                        
+            
+        </div>
+
+
+    </div>
+    
+    
+
+<br><br>
+
+
+
+
+{% endblock %}

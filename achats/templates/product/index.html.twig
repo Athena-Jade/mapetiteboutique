@@ -1,0 +1,48 @@
+ {% extends 'base.html.twig' %}  
+
+{% block title %}Nos produits{% endblock %} 
+
+
+{% block content %} 
+ 
+<div class="notre-catalogue"> 
+   <div class="formulaire-catalogue">
+        <div class="formulaire-produits"> 
+            <h3 style="margin-left:32%" >Filtrer</h3>
+            <h6>{{ form(form) }}</h6> 
+            
+        </div>
+           
+    </div>
+
+    <div class="formulaire-produits"> 
+                   
+        {% for product in products %}
+            <div class="produits-echantillons ">
+                {% include 'product/single_product.html.twig' %}
+            </div>
+        {% endfor %}
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
+
+
+
+

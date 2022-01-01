@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+ <div class="formulaire_inscription"><br><br>
+    <h3>Inscription</h3><br>
+    <p>Veuillez vous inscrire</p>
+       
+    {% if notification %}
+    
+        <div class="alert-info">{{ notification }}</div>
+        <hr>
+    
+    {% endif %}
+
+    {{form(form)}}
+    
+       
+    <br><br>
+
+
+
+</div>{# inscription #}
+<br>
+{% endblock %}

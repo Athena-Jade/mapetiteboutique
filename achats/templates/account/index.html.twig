@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}   
+
+{% block title %}Votre compte {% endblock %}
+
+
+
+{% block content %} <br>
+   
+
+    <div class="contenair-compte">
+        <h3>Votre compte </h3><br>
+        
+        Bienvenue {{ app.user.firstname}} dans votre espace compte. <br>
+        Cet espace vous permet de gérer toutes vos informations personnelles.
+
+        {% if is_granted('ROLE_ADMIN') %}
+            <small><a href="/admin">Vous êtes un administrateur, accéder au Back Office</a></small><br/>
+        {% endif %}
+
+        <hr>
+        
+        <a href="{{ path('account_address_add')}}" class="btn btn-secondary btn-sm float-right">Ajouter une adresse</a>
+
+        <a href="{{path('account_password') }}" style="text-decoration:none"> - Modifier votre mot de passe</a><br>
+
+        <a href="{{path('account_address') }}" style="text-decoration:none"> - Gérer vos adresses</a><br>  
+    
+        <a href="{{ path('account_order') }}" style="text-decoration:none"> - Vos commandes</a><br>   
+
+        <hr>
+    </div>
+
+   
+
+{% endblock %}
